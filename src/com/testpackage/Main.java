@@ -18,7 +18,7 @@ public class Main {
         ArrayList<String> lexeme2 = new ArrayList<>(1000);
         divideIntoLexemes(lexeme1, string1);
         divideIntoLexemes(lexeme2,string2);
-        String resultString=formNewString(lexeme1,lexeme2);
+        String resultString=formNewString(lexeme1, lexeme2);
         System.out.print(resultString);
     }
 
@@ -38,7 +38,6 @@ public class Main {
             else {
                 boolean earlySymbolContain=symbol.contains(String.valueOf(string.charAt(i-1)));
                 if(earlySymbolContain) {
-                    continue;
                 }
                 else {
                 lexeme.add(indexArray,word);
@@ -51,7 +50,7 @@ public class Main {
 
 
     public static String formNewString(ArrayList<String>array, ArrayList<String>array2) {
-        ArrayList <String> result = new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
         int min=Math.min(array.size(),array2.size());
         for (int i = 0; i < min; i++) {
             result.add(array.get(i) + ' ' + array2.get(i) + ' ');
